@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+@import "config";
+@import "fonts";
+@import "responsive";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $primary-color;
+  color: #fff;
+}
+button{
+  width: 140px;
+  height: 50px;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(to right, #D01498, #647ECB, #647ECB, #D01498);
+      z-index: -1;
+      transition: left 0.5s ease-in-out;
+  }
+  &:hover::before{
+      left: -100%;
+  }
+
+  
+}
+.App {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  // color: $primary-color;
+}
+ul {
+  list-style: none;
+}
+
+header {
+  height: 90px;
+  background-color: $primary-color;
+}
+// .container-fluid {
+//   margin: 0 auto;
+//   max-width: 100%;
+//   padding: 0 15px;
+// }
+// .container {
+//   margin: 0 auto;
+//   max-width: 1400px;
+//   padding: 0 15px;
+// }
+
+.ant-layout {
+  background: #fff;
+}
+.ant-layout-content {
+  background-color: #fff;
+  min-height: calc(100vh - #{$heightFooter} - #{$heightHeader}) !important;
+  overflow: auto;
+}
+.ant-layout.main-layout {
+  background-color: #fff;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.container{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+@media (min-width: 280px) and (max-width: 630px) {
+  .fa-bars{
+    font-size: 25px;
+  }
+
+.container{
+  max-width: 500px !important;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+button{
+  font-size: 12px;
+  font-weight: 400;
+  width: 70px;
+  height: 30px;
+ font-size: 10px;
+}
+}
+
+@media (max-width: 1025px) {
+.font-bold-1{
+  font-size: 30px;
+}
+}
+.css-1l9ohcm{
+border: none !important;
+background-color: rgb(19, 20, 24) !important;
+border-radius: 12px;
+padding: 0px !important;
+
+
+}
+.css-1l9ohcm:focus{
+outline: none !important;
+}
+.css-1xn7moh {
+  color: rgb(51, 133, 255);
+  filter: drop-shadow(rgb(51, 133, 255) 0px 6px 10px);
+  animation: 1s ease 0s infinite alternate none running animation-1w3cu63;
+}
+@keyframes animation-1w3cu63 {
+0%{
+transform: translateY(6px);
+}  
+100%{
+transform: translateY(-4px);
+}
+}
+.css-19oz2tc[data-error="true"] [data-img-container]::before {
+content: "";
+position: absolute;
+inset: 0px;
+background: rgb(229, 77, 46);
+animation: 1.5s ease 0s infinite normal none running animation-1j95wxd;
+border-radius: 20px;
+z-index: -1;
+}
+@keyframes animation-1j95wxd {
+0% {
+  transform: scale(0.95);
+}
+
+100% {
+  opacity: 0;
+  transform: scale(1.4);
+}
+}
