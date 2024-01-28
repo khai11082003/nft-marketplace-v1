@@ -16,7 +16,7 @@ const style = {
 };
 
 export default function BasicModal ({ open, setOpen }: any) {
-  const [loading, setLoading] = React.useState<any>(false);
+  const [loading, setLoading] = React.useState<any>(true);
   const handleClose = () => setOpen(false);
 
   return (
